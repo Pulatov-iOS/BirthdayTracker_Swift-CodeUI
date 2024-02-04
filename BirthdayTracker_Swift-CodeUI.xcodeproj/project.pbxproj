@@ -9,23 +9,32 @@
 /* Begin PBXBuildFile section */
 		1162BA432B6F94E900CBFD68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA422B6F94E900CBFD68 /* AppDelegate.swift */; };
 		1162BA452B6F94E900CBFD68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA442B6F94E900CBFD68 /* SceneDelegate.swift */; };
-		1162BA472B6F94E900CBFD68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA462B6F94E900CBFD68 /* ViewController.swift */; };
-		1162BA4A2B6F94E900CBFD68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1162BA482B6F94E900CBFD68 /* Main.storyboard */; };
 		1162BA4D2B6F94E900CBFD68 /* BirthdayTracker_Swift_CodeUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA4B2B6F94E900CBFD68 /* BirthdayTracker_Swift_CodeUI.xcdatamodeld */; };
 		1162BA4F2B6F94EC00CBFD68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1162BA4E2B6F94EC00CBFD68 /* Assets.xcassets */; };
 		1162BA522B6F94EC00CBFD68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1162BA502B6F94EC00CBFD68 /* LaunchScreen.storyboard */; };
+		1162BA5A2B6F979500CBFD68 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA592B6F979500CBFD68 /* Coordinator.swift */; };
+		1162BA5F2B6F985800CBFD68 /* BirthdayListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA5E2B6F985800CBFD68 /* BirthdayListPresenter.swift */; };
+		1162BA612B6F99C600CBFD68 /* BirthdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA602B6F99C600CBFD68 /* BirthdayTableViewCell.swift */; };
+		1162BA642B6FA0AA00CBFD68 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA632B6FA0AA00CBFD68 /* CoreDataManager.swift */; };
+		1162BA672B6FA0D900CBFD68 /* BirthdayDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA662B6FA0D900CBFD68 /* BirthdayDTO.swift */; };
+		1162BA6A2B6FA45000CBFD68 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1162BA6C2B6FA45000CBFD68 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1162BA3F2B6F94E900CBFD68 /* BirthdayTracker_Swift-CodeUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BirthdayTracker_Swift-CodeUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1162BA422B6F94E900CBFD68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1162BA442B6F94E900CBFD68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1162BA462B6F94E900CBFD68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1162BA492B6F94E900CBFD68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1162BA4C2B6F94E900CBFD68 /* BirthdayTracker_Swift_CodeUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirthdayTracker_Swift_CodeUI.xcdatamodel; sourceTree = "<group>"; };
 		1162BA4E2B6F94EC00CBFD68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1162BA512B6F94EC00CBFD68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1162BA532B6F94EC00CBFD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1162BA592B6F979500CBFD68 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1162BA5E2B6F985800CBFD68 /* BirthdayListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListPresenter.swift; sourceTree = "<group>"; };
+		1162BA602B6F99C600CBFD68 /* BirthdayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayTableViewCell.swift; sourceTree = "<group>"; };
+		1162BA632B6FA0AA00CBFD68 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1162BA662B6FA0D900CBFD68 /* BirthdayDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayDTO.swift; sourceTree = "<group>"; };
+		1162BA6B2B6FA45000CBFD68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1162BA6D2B6FA46100CBFD68 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +67,52 @@
 		1162BA412B6F94E900CBFD68 /* BirthdayTracker_Swift-CodeUI */ = {
 			isa = PBXGroup;
 			children = (
+				1162BA592B6F979500CBFD68 /* Coordinator.swift */,
+				1162BA622B6FA09E00CBFD68 /* Database */,
+				1162BA652B6FA0C600CBFD68 /* Model */,
+				1162BA5B2B6F983000CBFD68 /* BirthdayList */,
 				1162BA422B6F94E900CBFD68 /* AppDelegate.swift */,
 				1162BA442B6F94E900CBFD68 /* SceneDelegate.swift */,
-				1162BA462B6F94E900CBFD68 /* ViewController.swift */,
-				1162BA482B6F94E900CBFD68 /* Main.storyboard */,
 				1162BA4E2B6F94EC00CBFD68 /* Assets.xcassets */,
 				1162BA502B6F94EC00CBFD68 /* LaunchScreen.storyboard */,
 				1162BA532B6F94EC00CBFD68 /* Info.plist */,
 				1162BA4B2B6F94E900CBFD68 /* BirthdayTracker_Swift_CodeUI.xcdatamodeld */,
+				1162BA6C2B6FA45000CBFD68 /* Localizable.strings */,
 			);
 			path = "BirthdayTracker_Swift-CodeUI";
+			sourceTree = "<group>";
+		};
+		1162BA5B2B6F983000CBFD68 /* BirthdayList */ = {
+			isa = PBXGroup;
+			children = (
+				1162BA6E2B6FA6AB00CBFD68 /* New Group */,
+				1162BA5E2B6F985800CBFD68 /* BirthdayListPresenter.swift */,
+				1162BA602B6F99C600CBFD68 /* BirthdayTableViewCell.swift */,
+			);
+			path = BirthdayList;
+			sourceTree = "<group>";
+		};
+		1162BA622B6FA09E00CBFD68 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				1162BA632B6FA0AA00CBFD68 /* CoreDataManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		1162BA652B6FA0C600CBFD68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1162BA662B6FA0D900CBFD68 /* BirthdayDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1162BA6E2B6FA6AB00CBFD68 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +157,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 1162BA362B6F94E900CBFD68;
 			productRefGroup = 1162BA402B6F94E900CBFD68 /* Products */;
@@ -129,8 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1162BA522B6F94EC00CBFD68 /* LaunchScreen.storyboard in Resources */,
+				1162BA6A2B6FA45000CBFD68 /* Localizable.strings in Resources */,
 				1162BA4F2B6F94EC00CBFD68 /* Assets.xcassets in Resources */,
-				1162BA4A2B6F94E900CBFD68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,30 +187,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1162BA612B6F99C600CBFD68 /* BirthdayTableViewCell.swift in Sources */,
 				1162BA4D2B6F94E900CBFD68 /* BirthdayTracker_Swift_CodeUI.xcdatamodeld in Sources */,
-				1162BA472B6F94E900CBFD68 /* ViewController.swift in Sources */,
+				1162BA5A2B6F979500CBFD68 /* Coordinator.swift in Sources */,
 				1162BA432B6F94E900CBFD68 /* AppDelegate.swift in Sources */,
 				1162BA452B6F94E900CBFD68 /* SceneDelegate.swift in Sources */,
+				1162BA642B6FA0AA00CBFD68 /* CoreDataManager.swift in Sources */,
+				1162BA5F2B6F985800CBFD68 /* BirthdayListPresenter.swift in Sources */,
+				1162BA672B6FA0D900CBFD68 /* BirthdayDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1162BA482B6F94E900CBFD68 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1162BA492B6F94E900CBFD68 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1162BA502B6F94EC00CBFD68 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1162BA512B6F94EC00CBFD68 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1162BA6C2B6FA45000CBFD68 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1162BA6B2B6FA45000CBFD68 /* en */,
+				1162BA6D2B6FA46100CBFD68 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -175,6 +226,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -238,6 +290,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -301,7 +354,6 @@
 				INFOPLIST_FILE = "BirthdayTracker_Swift-CodeUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -330,7 +382,6 @@
 				INFOPLIST_FILE = "BirthdayTracker_Swift-CodeUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

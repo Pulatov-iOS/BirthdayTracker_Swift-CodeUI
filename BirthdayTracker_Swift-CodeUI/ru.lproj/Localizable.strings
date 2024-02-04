@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  BirthdayTracker_Swift-CodeUI
+
+  Created by Alexander on 4.02.24.
+  
+*/
+
+// MARK: - BirthdayList Page
+"birthdayList.titleLabel" = "Дни рождения";
