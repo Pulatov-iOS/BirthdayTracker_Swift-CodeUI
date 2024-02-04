@@ -8,3 +8,13 @@
 
 // MARK: - BirthdayList Page
 "birthdayList.titleLabel" = "Birthday List";
+
+// MARK: - AddBirthday Page
+"addBirthday.titleLabel" = "New Birthday";
+"addBirthday.hintLabel" = "Enter some information below:";
+"addBirthday.nameTextField" = "Name";
+"addBirthday.surnameTextField" = "Surname";
+"addBirthday.saveBirthdayButton" = "Save";
+"addBirthday.daysUntilBirthdayLabel" = "Days";
+"addBirthday.notificationTitle" = "Birthday Reminder";
+"addBirthday.notificationBody" = "Today is your friend's birthday!";

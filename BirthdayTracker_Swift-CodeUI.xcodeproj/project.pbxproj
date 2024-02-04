@@ -18,6 +18,9 @@
 		1162BA642B6FA0AA00CBFD68 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA632B6FA0AA00CBFD68 /* CoreDataManager.swift */; };
 		1162BA672B6FA0D900CBFD68 /* BirthdayDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA662B6FA0D900CBFD68 /* BirthdayDTO.swift */; };
 		1162BA6A2B6FA45000CBFD68 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1162BA6C2B6FA45000CBFD68 /* Localizable.strings */; };
+		1162BA712B6FA95100CBFD68 /* AddBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA702B6FA95100CBFD68 /* AddBirthdayView.swift */; };
+		1162BA732B6FA95F00CBFD68 /* AddBirthdayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA722B6FA95F00CBFD68 /* AddBirthdayPresenter.swift */; };
+		1162BA752B6FAA9700CBFD68 /* BirthdayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162BA742B6FAA9700CBFD68 /* BirthdayListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		1162BA662B6FA0D900CBFD68 /* BirthdayDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayDTO.swift; sourceTree = "<group>"; };
 		1162BA6B2B6FA45000CBFD68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1162BA6D2B6FA46100CBFD68 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1162BA702B6FA95100CBFD68 /* AddBirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayView.swift; sourceTree = "<group>"; };
+		1162BA722B6FA95F00CBFD68 /* AddBirthdayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayPresenter.swift; sourceTree = "<group>"; };
+		1162BA742B6FAA9700CBFD68 /* BirthdayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +91,10 @@
 		1162BA5B2B6F983000CBFD68 /* BirthdayList */ = {
 			isa = PBXGroup;
 			children = (
-				1162BA6E2B6FA6AB00CBFD68 /* New Group */,
+				1162BA742B6FAA9700CBFD68 /* BirthdayListView.swift */,
 				1162BA5E2B6F985800CBFD68 /* BirthdayListPresenter.swift */,
 				1162BA602B6F99C600CBFD68 /* BirthdayTableViewCell.swift */,
+				1162BA6F2B6FA91700CBFD68 /* AddBirthday */,
 			);
 			path = BirthdayList;
 			sourceTree = "<group>";
@@ -108,11 +115,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		1162BA6E2B6FA6AB00CBFD68 /* New Group */ = {
+		1162BA6F2B6FA91700CBFD68 /* AddBirthday */ = {
 			isa = PBXGroup;
 			children = (
+				1162BA702B6FA95100CBFD68 /* AddBirthdayView.swift */,
+				1162BA722B6FA95F00CBFD68 /* AddBirthdayPresenter.swift */,
 			);
-			path = "New Group";
+			path = AddBirthday;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,10 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1162BA712B6FA95100CBFD68 /* AddBirthdayView.swift in Sources */,
 				1162BA612B6F99C600CBFD68 /* BirthdayTableViewCell.swift in Sources */,
 				1162BA4D2B6F94E900CBFD68 /* BirthdayTracker_Swift_CodeUI.xcdatamodeld in Sources */,
 				1162BA5A2B6F979500CBFD68 /* Coordinator.swift in Sources */,
 				1162BA432B6F94E900CBFD68 /* AppDelegate.swift in Sources */,
+				1162BA752B6FAA9700CBFD68 /* BirthdayListView.swift in Sources */,
+				1162BA732B6FA95F00CBFD68 /* AddBirthdayPresenter.swift in Sources */,
 				1162BA452B6F94E900CBFD68 /* SceneDelegate.swift in Sources */,
 				1162BA642B6FA0AA00CBFD68 /* CoreDataManager.swift in Sources */,
 				1162BA5F2B6F985800CBFD68 /* BirthdayListPresenter.swift in Sources */,

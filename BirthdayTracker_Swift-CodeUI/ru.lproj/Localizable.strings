@@ -8,3 +8,13 @@
 
 // MARK: - BirthdayList Page
 "birthdayList.titleLabel" = "Дни рождения";
+
+// MARK: - AddBirthday Page
+"addBirthday.titleLabel" = "Новый День Рождения";
+"addBirthday.hintLabel" = "Введите информацию ниже:";
+"addBirthday.nameTextField" = "Имя";
+"addBirthday.surnameTextField" = "Фамилия";
+"addBirthday.saveBirthdayButton" = "Сохранить";
+"addBirthday.daysUntilBirthdayLabel" = "Дней";
+"addBirthday.notificationTitle" = "Напоминание о дне рождения";
+"addBirthday.notificationBody" = "Сегодня день рождения у вашего друга!";

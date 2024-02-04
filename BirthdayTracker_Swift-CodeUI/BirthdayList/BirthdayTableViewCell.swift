@@ -29,11 +29,11 @@ final class BirthdayTableViewCell: UITableViewCell {
     
     // MARK: - Helpers
     private func addSubviews() {
-        addSubview(containerView)
-        addSubview(nameLabel)
-        addSubview(surnameLabel)
-        addSubview(birthdayDateLabel)
-        addSubview(daysUntilBirthdayLabel)
+        contentView.addSubview(containerView)
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(surnameLabel)
+        containerView.addSubview(birthdayDateLabel)
+        containerView.addSubview(daysUntilBirthdayLabel)
     }
     
     private func configureConstraints() {
@@ -42,43 +42,55 @@ final class BirthdayTableViewCell: UITableViewCell {
         }
         
         NSLayoutConstraint.activate([
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 22),
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -22),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             
-            nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 15),
+            nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
             nameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15),
             nameLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.5),
-            
-            surnameLabel.topAnchor.constraint(equalTo: nameLabel.topAnchor, constant: 10),
+
+            surnameLabel.topAnchor.constraint(equalTo: nameLabel.topAnchor, constant: 35),
             surnameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15),
-            surnameLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -15),
-            surnameLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.5),
+            surnameLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.4),
+            surnameLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
             
-            daysUntilBirthdayLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 15),
+            daysUntilBirthdayLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
             daysUntilBirthdayLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -15),
-            daysUntilBirthdayLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.2),
+            daysUntilBirthdayLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.3),
             
-            birthdayDateLabel.topAnchor.constraint(equalTo: daysUntilBirthdayLabel.topAnchor, constant: 10),
+            birthdayDateLabel.topAnchor.constraint(equalTo: daysUntilBirthdayLabel.topAnchor, constant: 35),
             birthdayDateLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -15),
-            birthdayDateLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -15),
-            birthdayDateLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.4),
+            birthdayDateLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
+            birthdayDateLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.5),
         ])
     }
     
     private func configureUI() {
         backgroundColor = .clear
         
-        backgroundColor = .birthdayCellBackground
+        containerView.backgroundColor = .birthdayCellBackground
         containerView.layer.shadowColor = UIColor.cellShadow.cgColor
         containerView.layer.shadowOpacity = 0.1
         containerView.layer.shadowRadius = 16
         containerView.layer.cornerRadius = 8
+        
+        daysUntilBirthdayLabel.textAlignment = .right
+        birthdayDateLabel.textAlignment = .right
     }
     
-    func setInformation() {
+    func setInformation(birthday: Birthday) {
+        nameLabel.text = birthday.name
+        surnameLabel.text = birthday.surname
         
+        let daysUntilBirthday = daysUntilBirthday(birthday: birthday.birthdayDate ?? Date()) ?? 0
+        daysUntilBirthdayLabel.text = "\(daysUntilBirthday) \(NSLocalizedString("addBirthday.daysUntilBirthdayLabel", comment: ""))"
+        if daysUntilBirthday < 30 {
+            daysUntilBirthdayLabel.textColor = .red
+        }
+
+        birthdayDateLabel.text = "\(dateToFormat(birthday.birthdayDate ?? Date()))"
     }
     
     private func cellTappedHandler() {
@@ -89,4 +101,37 @@ final class BirthdayTableViewCell: UITableViewCell {
     @objc private func cellTapped() {
          delegate?.didSelectCell(self)
      }
+    
+    private func dateToFormat(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d MMMM yyyy 'г.'"
+        let formattedDate = dateFormatter.string(from: date)
+        return formattedDate
+    }
+    
+    private func daysUntilBirthday(birthday: Date) -> Int? {
+        let calendar = Calendar.current
+        let currentDate = Date()
+        
+        let currentYear = calendar.component(.year, from: currentDate)
+        let birthdayComponents = calendar.dateComponents([.month, .day], from: birthday)
+        var birthdayThisYearComponents = DateComponents()
+        birthdayThisYearComponents.year = currentYear
+        birthdayThisYearComponents.month = birthdayComponents.month
+        birthdayThisYearComponents.day = birthdayComponents.day
+        
+        guard let birthdayThisYear = calendar.date(from: birthdayThisYearComponents) else {
+            return nil
+        }
+        
+        if let difference = calendar.dateComponents([.day], from: currentDate, to: birthdayThisYear).day, difference >= 0 {
+            return difference
+        } else {
+            let nextBirthdayComponents = DateComponents(year: currentYear + 1, month: birthdayComponents.month, day: birthdayComponents.day)
+            if let nextBirthday = calendar.date(from: nextBirthdayComponents) {
+                return calendar.dateComponents([.day], from: currentDate, to: nextBirthday).day
+            }
+        }
+        return nil
+    }
 }
