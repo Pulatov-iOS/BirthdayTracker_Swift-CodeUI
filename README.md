@@ -9,7 +9,7 @@ BirthdayTracker - An iOS application that allows you to quickly save birthdays, 
 
 ## Screenshots
 
-
+![Screenshots](Screenshots/demo.png)
 
 ## About
 
