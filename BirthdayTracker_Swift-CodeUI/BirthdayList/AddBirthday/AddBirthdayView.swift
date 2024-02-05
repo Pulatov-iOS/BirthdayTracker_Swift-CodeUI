@@ -1,5 +1,4 @@
 import UIKit
-import UserNotifications
 
 protocol AddBirthdayView: AnyObject {
     func showErrorAlert(error: String)
@@ -25,7 +24,6 @@ final class DefaultAddBirthdayView: UIViewController {
         configureConstraints()
         configureUI()
         setupDatePicker()
-        permissionSendNotifications()
         hideKeyboard()
     }
     
@@ -109,7 +107,7 @@ final class DefaultAddBirthdayView: UIViewController {
         if nameTextField.text != "" {
             let birthday = BirthdayDTO(name: nameTextField.text ?? "", surname: surnameTextField.text ?? "", birthdayDate: birthdayDateDatePicker.date)
             presenter.saveBirthdayButtonTapped(birthday)
-            scheduleNotification(timeInterval: presenter.timeIntervalUntilBirthday(birthday.birthdayDate) ?? TimeInterval())
+            presenter.scheduleNotification(timeInterval: presenter.timeIntervalUntilBirthday(birthday.birthdayDate) ?? TimeInterval())
         }
     }
     

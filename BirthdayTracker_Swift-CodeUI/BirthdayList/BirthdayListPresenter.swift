@@ -20,7 +20,7 @@ final class DefaultBirthdayListPresenter {
             let today = Date()
             let birthday1NextBirthday = Calendar.current.nextDate(after: today, matching: DateComponents(month: Calendar.current.component(.month, from: birthday1.birthdayDate ?? Date()), day: Calendar.current.component(.day, from: birthday1.birthdayDate ?? Date())), matchingPolicy: .nextTime)!
             let birthday2NextBirthday = Calendar.current.nextDate(after: today, matching: DateComponents(month: Calendar.current.component(.month, from: birthday2.birthdayDate ?? Date()), day: Calendar.current.component(.day, from: birthday2.birthdayDate ?? Date())), matchingPolicy: .nextTime)!
-            return birthday1NextBirthday > birthday2NextBirthday
+            return birthday1NextBirthday < birthday2NextBirthday
         }
     }
 }
